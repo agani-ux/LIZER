@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Build your profile</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets-form wizard\fonts\material-icon\css\material-design-iconic-font.min.css">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets-form wizard\css\style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Build your profile</h2>
+            <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                <h3>
+                    Profile Setup
+                </h3>
+                <fieldset>
+                    <div class="form-row">
+                        <div class="form-file">
+                            <input type="file" class="inputfile" name="your_picture" id="your_picture"  onchange="readURL(this);" data-multiple-caption="{count} files selected" multiple />
+                            <label for="your_picture">
+                                <figure>
+                                    <img src="assets-form wizard\images\your-picture.png" alt="" class="your_picture_image">
+                                </figure>
+                                <span class="file-button">choose picture</span>
+                            </label>
+                        </div>
+                        <div class="form-group-flex">
+                            <div class="form-group">
+                                <input type="text" name="Name" id="Name" placeholder="Name" />
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="Phone_number" id="Phone_number" placeholder="Phone number" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="Email" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <h3>
+                    Service details
+                </h3>
+                <fieldset>
+                    <div class="form-row">
+                        <div class="form">
+                            <div class="form-group">
+                            <select name="service_type" class="services" id="service_type"placeholder="Service type">
+                              <option value="">Service type</option>
+                              <option value="Tattoo artist">Tattoo artist</option>
+                              <option value="Spa">Spa</option>
+                              <option value="Hair stylist">Hair stylist</option>
+                              <option value="Manicurist">Manicurist</option>
+                              <option value="Make-up artist">Make-up artist</option>
+                              <option value="Barber">Barber</option>
+                              <option value="Barbershop">Barbershop</option>
+                              <option value="Beauty salon">Beauty salon</option>
+                              <option value="Sauna">Sauna</option>
+                              <option value="Facials/Beauty lab">Facials/Beauty lab</option>
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                         </div>
+                            <div class="form-group">
+                               <!-- <input type="number" name="Phone_number" id="Phone_number" placeholder="Phone number" />-->
+                               <textarea name="Service description" class="description" id="Service description" placeholder="Service description" style="width: 764px;"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <select name="service_duration" class="duration" id="service_duration"placeholder="Service duration">
+                                <option value="">Service duration</option>
+                                <option value="15">15 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="45">45 minutes</option>
+                                <option value="1">1 hour</option>
+                                <option value="1.5">1.5 hours</option>
+                                <option value="2">2 hours</option>
+                                <option value="2.5">2.5 hours</option>
+                                <option value="3">3 hours</option>
+                                <option value="3.5">3.5 hours</option>
+                                <option value="4">4 hours</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <span id="currency">KES</span>
+                                <input  class="currency" name="number" id="Price" placeholder="Service price" />
+                            </div>
+                           <!-- <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="Email" />
+                            </div>-->
+                            <div class="form-row form-input-flex">
+                                <div class="form-input">
+                                 <!--<input type="text" name="street_name" id="street_name" placeholder="Working days" />-->
+                                 <select name="service_duration" class="duration" id="service_duration"placeholder="Working days">
+                                    <option value="">Working days</option>
+                                    <option value="Mondays to Fridays">Mondays to Fridays</option>
+                                    <option value="Mondays to Fridays, Saturdays">Mondays to Fridays, Saturdays</option>
+                                    <option value="Mondays to Fridays, Weekends">Mondays to Fridays, Weekends</option>
+                                    <option value="Weekends">Weekends</option>
+                                    <option value="Everyday">Everyday</option>
+                                  </select>
+                                </div>
+                                <div class="form-input">
+                                   <!--<input type="text" name="street_number" id="street_number" placeholder="Working hours" />-->
+                                   <select name="service_duration" class="duration" id="service_duration"placeholder="Working hours">
+                                    <option value="">Working hours</option>
+                                    <option value="8am to 4pm">8am to 4pm</option>
+                                    <option value="9am to 5pm">9am to 5pm</option>
+                                    <option value="10am to 6pm">10am to 6pm</option>
+                                    <option value="8am to 4pm, 8am to 1pm">8am to 4pm, 8am to 1pm</option>
+                                    <option value="9am to 5pm, 9am to 2pm">9am to 5pm, 9am to 2pm</option>
+                                    <option value="10am to 6pm, 10am t0 3pm">10am to 6pm, 10am to 3pm</option>
+                                    <option value="8am to 1pm">8am to 1pm</option>
+                                    <option value="9am to 2pm">9am to 2pm</option>
+                                    <option value="10am to 3pm">10am to 3pm</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <h3>
+                    Additional information
+                </h3>
+                <fieldset>
+                   <!--<div class="form-row form-input-flex">
+                        <div class="form-input">
+                            <input type="text" name="street_name" id="street_name" placeholder="Street Name" />
+                        </div>
+                        <div class="form-input">
+                            <input type="text" name="street_number" id="street_number" placeholder="Street Number" />
+                        </div>
+                    </div>
+                    <div class="form-row form-input-flex">
+                        <div class="form-input">
+                            <input type="text" name="city" id="city" placeholder="City" />
+                        </div>
+                        <div class="form-input">
+                            <select name="country" id="country">
+                                <option value="">Country</option>
+                                <option value="Viet Nam">Viet Nam</option>
+                                <option value="USA">USA</option>
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+                    </div>-->
+                    <div class="form-row">
+                        <div class="form">
+                            <div class="form-group">
+                                <select name="communication_method" class="communication" id="communication_method" placeholder="Preferred communication method">
+                                  <option value="">Preferred communication method</option>
+                                  <option value="Text">Text</option>
+                                  <option value="Phonecall">Phonecall</option>
+                                  <option value="Chat">Chat</option>
+                                  <option value="Email">Email</option>
+                                  <option value="in-app">In-app notifications</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                             </div>
+                            <div class="form-group">
+                                <input type="text" name="service_location" id="location" placeholder="Service location" />
+                            </div> 
+                            <div class="form-group">
+                                <input type="text" name="payment_method" id="payment" placeholder="Payment method" />
+                            </div> 
+                            
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="assets-form wizard\vendor\jquery\jquery.min.js"></script>
+    <script src="assets-form wizard\vendor\jquery-validation\dist\jquery.validate.min.js"></script>
+    <script src="assets-form wizard\vendor\jquery-validation\dist\additional-methods.min.js"></script>
+    <script src="assets-form wizard\vendor\jquery-steps\jquery.steps.min.js"></script>
+    <script src="assets-form wizard\js\main.js"></script>
+</body>
+</html>

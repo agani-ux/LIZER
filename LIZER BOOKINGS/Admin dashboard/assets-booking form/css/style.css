@@ -1,0 +1,228 @@
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 15px;
+}
+
+h5{
+	font-size: 70px;
+	font-family: 'Raleway', 'sans-serif';
+	color: #ffe5b4;
+	padding-left: 130px;
+}
+#booking {
+	font-family: 'Raleway', sans-serif;
+	background: #efe6d4;
+	/*background-size: cover;
+	background-position: center;*/
+}
+
+#booking::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: /*rgba(0, 0, 0, 0.7);*/#ffe5b4
+}
+
+.booking-form {
+	background: #664229;
+	max-width: 768px;
+	width: 100%;
+	margin: auto;
+	padding: 30px;
+	border-radius: 15px;
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+	background-color: transparent;
+	height: 65px;
+	padding: 0px 15px;
+	border-radius: 15px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	color:#fff;
+	border: 0px;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 2px solid #ffe5b4;
+}
+
+placeholder{
+	color: #664229;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.booking-form .form-control::placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.booking-form .form-group.input-not-empty .form-control {
+	border-color: #fff;
+	padding-bottom: 20px;
+}
+
+.booking-form .form-label {
+	color: #000;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 24px;
+	height: 24px;
+	font-size: 14px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	opacity: 0;
+	pointer-events: none;
+	display: block;
+	width: 100%;
+	background: #ffe5b4;
+	padding: 0px 15px;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+	opacity: 1;
+	bottom: 0px;
+	color: /*#1a1b1d*/ #664229;
+	background: #ffe5b4;
+	border-radius: 5px;
+}
+
+.booking-form input[type="date"].form-control,
+.booking-form input[type="time"].form-control {
+	padding-bottom: 20px;
+}
+
+.booking-form input[type="date"].form-control:invalid,
+.booking-form input[type="time"].form-control:invalid {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.booking-form input[type="date"].form-control+.form-label,
+.booking-form input[type="time"].form-control+.form-label {
+	color: /*#1a1b1d*/ #664229;
+	opacity: 1;
+	border-radius: 5px;
+}
+
+.booking-form select.form-control {
+	padding-bottom: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.booking-form select.form-control option {
+	color: #1a1b1d;
+}
+
+.booking-form select.form-control:invalid {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 0px;
+	bottom: 26px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.booking-form .form-group.input-not-empty select.form-control+.select-arrow {
+	color: #fff;
+}
+
+.booking-form select.form-control~.form-label {
+	color: #1a1b1d;
+	opacity: 1;
+}
+
+.booking-form .form-btn {
+	margin-top: 10px;
+}
+
+.booking-form .submit-btn {
+	font-weight: 700;
+	height: 55px;
+	color: #1a1b1d;
+	background-color: #ffe5b4;
+	font-size: 18px;
+	border-radius: 15px;
+	width: 300px;
+	border: none;
+	position: relative;
+	left: 220px;
+}
+.submit-btn:hover{
+	background-color: #fff;
+}
+.copy-link-btn {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #664229;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	position: relative;
+	left: 950px;
+}
+
+.copy-link-btn:hover {
+	background-color: #4cae4c;
+}
+.back-btn {
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	background-color: #0275d8;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.back-btn:hover {
+	background-color: #025aa5;
+}
