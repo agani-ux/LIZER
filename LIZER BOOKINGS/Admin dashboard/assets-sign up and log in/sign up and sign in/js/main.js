@@ -22,7 +22,7 @@
             // Submit form via AJAX or any desired method
             alert("Form submitted successfully!");
 
-            window.location.href = 'Admin dashboard/html/admin-dashboard.html';
+            window.location.href = 'html/admin-dashboard.html';
         });
     }
 
