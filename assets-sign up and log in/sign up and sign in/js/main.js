@@ -208,15 +208,15 @@ submit.addEventListener("click", function(event) {
     const form = document.getElementById('register-form');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      const name = document.getElementById('name').value;
+      //const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const password = document.getElementById('pass').value;
       const rePassword = document.getElementById('re_pass').value;
 
-      if (name === "") {
+     /* if (name === "") {
         alert("Please enter your name.");
         return false;
-      }
+      }*/
 
       if (email === "") {
         alert("Please enter your email.");
