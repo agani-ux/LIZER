@@ -200,6 +200,7 @@ submit.addEventListener("click", function(event) {
     validateSignInForm();
   });
 
+  // Validate and submit sign-up form
   function validateSignUpForm() {
     const form = document.getElementById('register-form');
     form.addEventListener('submit', function(event) {
