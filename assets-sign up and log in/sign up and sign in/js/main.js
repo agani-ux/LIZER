@@ -133,7 +133,6 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA6pVqxO00QpZ3iW9XUDpmo1OiBObCh2YY",
   authDomain: "lizer-bookings.firebaseapp.com",
@@ -149,10 +148,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app); // Initialize the auth instance
 
-//inputs
-const nameInput = document.getElementById('name');
-
-//submit button
+// Submit button
 const submit = document.getElementById('signup');
 submit.addEventListener("click", function(event) {
   event.preventDefault();
@@ -208,15 +204,15 @@ submit.addEventListener("click", function(event) {
     const form = document.getElementById('register-form');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      //const name = document.getElementById('name').value;
+      // const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const password = document.getElementById('pass').value;
       const rePassword = document.getElementById('re_pass').value;
 
-     /* if (name === "") {
-        alert("Please enter your name.");
-        return false;
-      }*/
+      // if (name === "") {
+      //   alert("Please enter your name.");
+      //   return false;
+      // }
 
       if (email === "") {
         alert("Please enter your email.");
