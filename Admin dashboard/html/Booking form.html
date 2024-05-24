@@ -39,11 +39,11 @@
 						<form>
 							<h5>Booking form</h5>
 							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Enter your Name"required>
+								<input class="form-control" type="text" id="name" placeholder="Enter your Name"required>
 								<span class="form-label">Your Name</span>
 							</div>
 							<div class="form-group">
-								<input class="form-control" type="number" placeholder="Enter your Phone number" required>
+								<input class="form-control" type="number" id="phone number" placeholder="Enter your Phone number" required>
 								<span class="form-label">Your Phone number</span>
 							</div>
 							<!--<div class="form-group">
@@ -67,33 +67,33 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="date" required>
+										<input class="form-control" id="date" type="date" required>
 										<span class="form-label">Select Date</span>
 									</div>
 								</div>
 								
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="time" required>
+										<input class="form-control" id="time" type="time" required>
 										<span class="form-label">Select Time</span>
 									</div>
 							</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Additional information">
+										<input class="form-control"  id="additional information"  type="text" placeholder="Additional information">
 										<span class="form-label">Additional information</span>
 									</div>
 								</div>
 								
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="file">
+										<input class="form-control" id="photo"   type="file">
 										<span class="form-label">Select file/photo</span>
 									</div>
 								
 							</div>
 							<div class="form-btn">
-								<button class="submit-btn">Submit</button>
+								<button  id="submit"class="submit-btn">Submit</button>
 							</div>
 						</form>
 						<!--<div class="form-btn">
@@ -104,7 +104,7 @@
 			</div>
 		</div>
 		<div class="form-btn">
-			<button type="button" class="copy-link-btn" onclick="copyLink()">Copy Link</button>
+			<button type="button" class="copy-link-btn" id="copy link" onclick="copyLink()">Copy Link</button>
 		</div>
 	</div>
 
