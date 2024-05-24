@@ -54,30 +54,3 @@ document.getElementById("submit").addEventListener("click", (e) => {
     document.getElementById("additional_information").value = "";
   });
 });
-
-$('.form-control').each(function () {
-  floatedLabel($(this));
-});
-
-$('.form-control').on('input', function () {
-  floatedLabel($(this));
-});
-
-function floatedLabel(input) {
-  var $field = input.closest('.form-group');
-  if (input.val()) {
-    $field.addClass('input-not-empty');
-  } else {
-    $field.removeClass('input-not-empty');
-  }
-}
-function copyLink() {
-        const link = window.location.href;
-        const tempInput = document.createElement('input');
-        document.body.appendChild(tempInput);
-        tempInput.value = link;
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        alert('Link copied to clipboard!');
-}
