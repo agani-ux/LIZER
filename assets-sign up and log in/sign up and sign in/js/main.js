@@ -172,6 +172,26 @@ document.getElementById('register-form').addEventListener('submit', function(eve
   });
 });
 
+// Handle the login form submission
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('your_name').value;
+    const password = document.getElementById('your_pass').value;
+
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert("Logged in successfully!");
+        // Redirect or perform other actions as needed
+        window.location.href = 'Admin dashboard/html/admin-dashboard.html'; // Redirect to dashboard or any other page
+    }).catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+    });
+});
+
 (function ($) {
   "use strict";
 
