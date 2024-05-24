@@ -197,28 +197,41 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
   // Validate and submit sign-in form
   function validateSignInForm() {
-    const form = document.getElementById('login-form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const username = document.getElementById('your_name').value;
-      const password = document.getElementById('your_pass').value;
+  const form = document.getElementById('login-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('your_name').value;
+    const password = document.getElementById('your_pass').value;
 
-      if (username === "") {
-        alert("Please enter your name.");
-        return false;
+    if (username === "" || password === "") {
+      alert("Please enter your name and password.");
+      return false;
+    }
+
+    // Submit form via AJAX or any desired method
+    // Example using fetch API for AJAX submission
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    })
+    .then(response => {
+      if (response.ok) {
+        window.location.href = 'Admin dashboard/html/admin-dashboard.html';
+      } else {
+        return response.json().then(data => {
+          throw new Error(data.message);
+        });
       }
-
-      if (password === "") {
-        alert("Please enter your password.");
-        return false;
-      }
-
-      // Submit form via AJAX or any desired method
-      alert("Form submitted successfully!");
-
-      window.location.href = 'Admin dashboard/html/admin-dashboard.html';
+    })
+    .catch(error => {
+      alert(error.message);
     });
-  }
+  });
+}
+
 
   document.addEventListener('DOMContentLoaded', function() {
     validateSignInForm();
